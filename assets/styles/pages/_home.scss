@@ -1,0 +1,18 @@
+.location {
+  padding: 15px 0;
+  background-color: $grey;
+  text-align: center;
+}
+
+.functioning {
+  background-color: $white;
+}
+
+.functioning,
+.restaurants {
+  padding: 50px 0 65px 0;
+}
+
+.restaurants {
+  background-color: $grey-light;
+}

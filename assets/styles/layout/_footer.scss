@@ -1,0 +1,19 @@
+.footer {
+  padding: 20px 0 30px 0;
+  color: $white;
+  background-color: $grey-dark;
+  &__title {
+    font-family: $title;
+    font-weight: 400;
+    a {
+      color: $white;
+    }
+  }
+  &__list {
+    &-item {
+      a {
+        color: $white;
+      }
+    }
+  }
+}
