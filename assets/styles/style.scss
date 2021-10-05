@@ -1,13 +1,15 @@
 @import "utils/variables";
+@import "utils/mixins";
 
 @import "base/normalize";
 @import "base/base";
 @import "base/typography";
 
-@import "layout/cta";
 @import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 @import "layout/wrapper";
+
+@import "components/button";
 
 @import "pages/home";
