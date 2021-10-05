@@ -25,14 +25,13 @@
 }
 
 .functioning {
+  padding: 50px 0 65px 0;
   background-color: $white;
-
   &__title {
     margin-bottom: 30px;
   }
   &__list {
     padding-left: 12.5px;
-
     &-item {
       position: relative;
       margin-bottom: 20px;
@@ -96,11 +95,10 @@
   }
 }
 
-.functioning,
 .restaurants {
-  padding: 50px 0 65px 0;
-}
-
-.restaurants {
+  padding: 50px 0 45px 0;
   background-color: $grey-light;
+  &__title {
+    margin-bottom: 20px;
+  }
 }
