@@ -1,18 +1,49 @@
+// Colors
+$color__footer: $white;
+$color__footer-bg: $grey-dark;
+$color__footer-title: $white;
+$color__footer-item: $white;
+
+// Fonts
+$font__title: $title;
+
 .footer {
   padding: 20px 0 30px 0;
-  color: $white;
-  background-color: $grey-dark;
+  color: $color__footer;
+  background-color: $color__footer-bg;
   &__title {
-    font-family: $title;
+    font-family: $font__title;
     font-weight: 400;
+    margin-bottom: 20px;
     a {
-      color: $white;
+      color: $color__footer-title;
     }
   }
   &__list {
     &-item {
+      margin-bottom: 10px;
       a {
-        color: $white;
+        color: $color__footer-item;
+        font-weight: 300;
+      }
+      i {
+        width: 20px;
+      }
+      &:first-child,
+      &:nth-child(2) {
+        a {
+          font-weight: 400;
+        }
+      }
+      &:first-child {
+        i {
+          font-size: 14px;
+        }
+      }
+      &:nth-child(2) {
+        i {
+          font-size: 12px;
+        }
       }
     }
   }
