@@ -36,7 +36,7 @@ $color__card-check-icon: $white;
   &__price,
   &__check {
     display: flex;
-    transition: 0.2s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
 }
 .card--menu {
@@ -49,6 +49,9 @@ $color__card-check-icon: $white;
       }
       &__check {
         width: 60px;
+        i {
+          animation: rotate 0.4s;
+        }
       }
     }
   }
@@ -88,5 +91,15 @@ $color__card-check-icon: $white;
         font-size: 22px;
       }
     }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
