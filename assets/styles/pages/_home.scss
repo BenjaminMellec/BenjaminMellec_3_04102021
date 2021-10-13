@@ -1,6 +1,18 @@
+// Colors
+$color__location: $grey;
+$color__cta: $grey-light;
+$color__functioning: $white;
+$color__functioning-item-before: $white;
+$color__functioning-item-before-bg: $primary;
+$color__functioning-item-link: $grey-light;
+$color__functioning-item-link--active: #f5edff;
+$color__functioning-item-icon: $grey-dark;
+$color__functioning-item-icon--active: $primary;
+$color__restaurants: $grey-light;
+
 .location {
   padding: 16px 0;
-  background-color: $grey;
+  background-color: $color__location;
   text-align: center;
 
   &__text {
@@ -11,7 +23,7 @@
 .cta {
   padding: 35px 0 50px 0;
   text-align: center;
-  background-color: $grey-light;
+  background-color: $color__cta;
 
   &__title {
     max-width: 85%;
@@ -26,15 +38,23 @@
 
 .functioning {
   padding: 50px 0 65px 0;
-  background-color: $white;
+  background-color: $color__functioning;
   &__title {
     margin-bottom: 30px;
   }
   &__list {
     padding-left: 12.5px;
+    @include mq($laptop) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
     &-item {
       position: relative;
       margin-bottom: 20px;
+      @include mq($laptop) {
+        width: 30%;
+      }
       &::before {
         content: "1";
         position: absolute;
@@ -43,9 +63,9 @@
         transform: translate(-50%, -50%);
         width: 25px;
         height: 25px;
-        background-color: $primary;
+        background-color: $color__functioning-item-before-bg;
         border-radius: 25px;
-        color: $white;
+        color: $color__functioning-item-before;
         font-size: 12px;
         line-height: 25px;
         text-align: center;
@@ -72,15 +92,24 @@
       position: relative;
       display: flex;
       padding: 30px 30px 30px 75px;
-      background-color: $grey-light;
+      background-color: $color__functioning-item-link;
       border-radius: 20px;
       font-weight: 500;
       @include box-shadow;
+      transition: 0.2s;
       &:focus,
       &:active {
-        background-color: #f5edff;
+        background-color: $color__functioning-item-link--active;
         i {
-          color: $primary;
+          color: $color__functioning-item-icon;
+        }
+      }
+      @include mq($laptop) {
+        &:hover {
+          background-color: $color__functioning-item-link--active;
+          i {
+            color: $color__functioning-item-icon;
+          }
         }
       }
     }
@@ -90,15 +119,31 @@
       left: 35px;
       font-size: 16px;
       transform: translateY(-50%);
-      color: rgba($grey-dark, 0.6);
+      color: rgba($color__functioning-item-icon, 0.6);
     }
   }
 }
 
 .restaurants {
   padding: 50px 0 45px 0;
-  background-color: $grey-light;
+  background-color: $color__restaurants;
   &__title {
     margin-bottom: 20px;
+  }
+  &__list {
+    @include mq($tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+    }
+    &-item {
+      @include mq($tablet) {
+        padding: 0 10px;
+        width: 50%;
+      }
+      @include mq($desktop) {
+        width: 25%;
+      }
+    }
   }
 }

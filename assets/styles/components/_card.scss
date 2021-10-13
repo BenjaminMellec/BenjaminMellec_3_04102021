@@ -38,6 +38,25 @@ $color__card-check-icon: $white;
     display: flex;
     transition: 0.4s ease-in-out;
   }
+  &:not(.card--menu) {
+    transition: 0.2s;
+    &:focus,
+    &:active {
+      @include box-shadow(0.45);
+      transform: translateY(-2px);
+    }
+
+    @include mq($laptop) {
+      &:focus,
+      &:active {
+        @include box-shadow;
+      }
+      &:hover {
+        @include box-shadow(0.45);
+        transform: translateY(-2px);
+      }
+    }
+  }
 }
 .card--menu {
   display: flex;
