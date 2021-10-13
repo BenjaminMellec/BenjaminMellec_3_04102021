@@ -53,7 +53,7 @@ $color__restaurants: $grey-light;
       position: relative;
       margin-bottom: 20px;
       @include mq($laptop) {
-        width: 30%;
+        width: 31%;
       }
       &::before {
         content: "1";
@@ -101,14 +101,14 @@ $color__restaurants: $grey-light;
       &:active {
         background-color: $color__functioning-item-link--active;
         i {
-          color: $color__functioning-item-icon;
+          color: $color__functioning-item-icon--active;
         }
       }
       @include mq($laptop) {
         &:hover {
           background-color: $color__functioning-item-link--active;
           i {
-            color: $color__functioning-item-icon;
+            color: $color__functioning-item-icon--active;
           }
         }
       }

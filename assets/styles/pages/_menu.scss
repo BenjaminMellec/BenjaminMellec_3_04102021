@@ -11,7 +11,15 @@ main {
 
 .hero {
   width: 100%;
+  max-width: 1400px;
   height: 250px;
+  margin: auto;
+  @include mq($tablet) {
+    height: 350px;
+  }
+  @include mq($laptop) {
+    height: 450px;
+  }
 
   &__image {
     width: 100%;
@@ -27,6 +35,11 @@ main {
   background-color: $color__menu;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  @include mq($large) {
+    max-width: 1400px;
+    margin: auto;
+    border-radius: 0;
+  }
   &__title {
     margin-bottom: 30px;
     font-family: $font__menu-title;
@@ -54,6 +67,15 @@ main {
     display: inline-block;
     width: 100%;
     margin-bottom: 15px;
+  }
+  &__container {
+    @include mq($desktop) {
+      display: flex;
+      justify-content: space-between;
+      > div {
+        width: 32%;
+      }
+    }
   }
 
   .button {
