@@ -1,14 +1,17 @@
+// Box shadow mixin
 @mixin box-shadow($opacity: 0.15) {
   -webkit-box-shadow: 0px 7px 11px -3px rgba(0, 0, 0, $opacity);
   box-shadow: 0px 7px 11px -3px rgba(0, 0, 0, $opacity);
 }
 
+// Media queries mixin
 @mixin mq($breakpoint) {
   @media (min-width: $breakpoint) {
     @content;
   }
 }
 
+// Animations mixins
 @mixin loadingAnimation($duration: 1.6s, $delay: 0s) {
   animation: loading $duration $delay infinite ease-in-out;
 }

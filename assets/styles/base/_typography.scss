@@ -1,9 +1,16 @@
+// Colors
+$color__body: $black;
+$color__links: $black;
+
+// Fonts
+$font__body: $text;
+
 body {
-  font-family: $text;
+  font-family: $font__body;
   font-weight: 400;
-  color: $black;
+  color: $color__body;
 }
 
 a {
-  color: $black;
+  color: $color__links;
 }
