@@ -9,6 +9,6 @@
   }
 }
 
-@mixin loading($duration: 1.6s, $delay: 0s) {
+@mixin loadingAnimation($duration: 1.6s, $delay: 0s) {
   animation: loading $duration $delay infinite ease-in-out;
 }

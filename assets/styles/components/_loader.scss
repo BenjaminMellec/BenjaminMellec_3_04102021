@@ -24,18 +24,18 @@ $color__loader-item: $grey-dark;
     height: 6px;
     margin: 2px;
     background-color: rgba($color__loader-item, 0.5);
-    border-radius: 6px;
+    transform: scaleY(6px);
     &:nth-child(1) {
-      @include loading;
+      @include loadingAnimation;
     }
     &:nth-child(2) {
-      @include loading($delay: 0.4s);
+      @include loadingAnimation($delay: 0.4s);
     }
     &:nth-child(3) {
-      @include loading($delay: 0.8s);
+      @include loadingAnimation($delay: 0.8s);
     }
     &:nth-child(4) {
-      @include loading($delay: 1.2s);
+      @include loadingAnimation($delay: 1.2s);
     }
   }
 }
