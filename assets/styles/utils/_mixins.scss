@@ -12,3 +12,7 @@
 @mixin loadingAnimation($duration: 1.6s, $delay: 0s) {
   animation: loading $duration $delay infinite ease-in-out;
 }
+
+@mixin cardsAnimation($duration: 1s, $delay: 0s) {
+  animation: cards $duration $delay forwards ease-in-out;
+}

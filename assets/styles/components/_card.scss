@@ -61,7 +61,24 @@ $color__card-check-icon: $white;
 .card--menu {
   display: flex;
   margin-bottom: 15px;
-  &:hover {
+  transform: translateY(10px);
+  opacity: 0;
+
+  &:nth-child(1) {
+    @include cardsAnimation;
+  }
+  &:nth-child(2) {
+    @include cardsAnimation($delay: 0.2s);
+  }
+  &:nth-child(3) {
+    @include cardsAnimation($delay: 0.4s);
+  }
+  &:nth-child(4) {
+    @include cardsAnimation($delay: 0.6s);
+  }
+
+  &:focus,
+  &:active {
     .card {
       &__content {
         width: calc(100% - 105px);
@@ -70,6 +87,22 @@ $color__card-check-icon: $white;
         width: 60px;
         i {
           animation: rotate 0.4s;
+        }
+      }
+    }
+  }
+
+  @include mq($laptop) {
+    &:hover {
+      .card {
+        &__content {
+          width: calc(100% - 105px);
+        }
+        &__check {
+          width: 60px;
+          i {
+            animation: rotate 0.4s;
+          }
         }
       }
     }

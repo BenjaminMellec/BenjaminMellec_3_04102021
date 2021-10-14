@@ -10,6 +10,13 @@
   }
 }
 
+@keyframes cards {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0);
