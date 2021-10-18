@@ -25,7 +25,6 @@ $loaderDelays: (0s, 0.4s, 0.8s, 1.2s);
     height: 6px;
     margin: 2px;
     background-color: rgba($color__loader-item, 0.5);
-    transform: scaleY(1);
 
     @each $loaderDelay in $loaderDelays {
       $index: index($loaderDelays, $loaderDelay);

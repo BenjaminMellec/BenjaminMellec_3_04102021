@@ -1,12 +1,6 @@
 @keyframes loading {
-  0% {
-    transform: scaleY(1);
-  }
-  50% {
-    transform: scaleY(9);
-  }
   100% {
-    transform: scaleY(1);
+    transform: scaleY(8);
   }
 }
 
@@ -18,9 +12,6 @@
 }
 
 @keyframes rotate {
-  from {
-    transform: rotate(0);
-  }
   to {
     transform: rotate(360deg);
   }

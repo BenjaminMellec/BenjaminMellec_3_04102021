@@ -12,8 +12,9 @@
 }
 
 // Animations mixins
-@mixin loadingAnimation($duration: 1.6s, $delay: 0s) {
-  animation: loading $duration $delay infinite ease-in-out;
+@mixin loadingAnimation($duration: 1.2s, $delay: 0s) {
+  animation: loading $duration $delay backwards infinite ease-in-out;
+  animation-direction: alternate;
 }
 
 @mixin cardsAnimation($duration: 1s, $delay: 0s) {
