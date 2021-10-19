@@ -25,6 +25,17 @@ $font__title: $title;
       a {
         color: $color__footer-item;
         font-weight: 300;
+        transition: 0.2s;
+        &:focus,
+        &:active {
+          opacity: 0.6;
+        }
+
+        @include mq($laptop) {
+          &:hover {
+            opacity: 0.6;
+          }
+        }
       }
       i {
         width: 20px;
@@ -45,6 +56,10 @@ $font__title: $title;
           font-size: 12px;
         }
       }
+    }
+    @include mq($laptop) {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
