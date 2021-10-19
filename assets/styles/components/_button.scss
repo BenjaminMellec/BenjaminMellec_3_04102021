@@ -25,6 +25,10 @@ $color__button-gradient--2: $secondary;
     @include box-shadow(0.45);
   }
 
+  a {
+    color: $color__button-label;
+  }
+
   @include mq($laptop) {
     &:hover {
       opacity: 0.8;
