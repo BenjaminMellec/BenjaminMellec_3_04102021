@@ -41,10 +41,19 @@ main {
     border-radius: 0;
   }
   &__title {
+    display: flex;
+    align-items: center;
     margin-bottom: 30px;
     font-family: $font__menu-title;
     font-size: 28px;
     font-weight: 400;
+
+    span:first-child {
+      margin-right: 30px;
+    }
+    span:last-child {
+      display: flex;
+    }
   }
   &__subtitle {
     position: relative;
@@ -80,5 +89,8 @@ main {
 
   .button {
     margin-top: 15px;
+  }
+  .heart {
+    margin-top: 0;
   }
 }

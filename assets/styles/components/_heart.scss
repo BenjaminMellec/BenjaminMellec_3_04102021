@@ -1,0 +1,54 @@
+// Colors
+$color__heart-empty: rgba($grey-dark, 0.5);
+$color__heart-gradient--1: $primary;
+$color__heart-gradient--2: $secondary;
+
+.heart {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-top: 5px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    .heart__filled {
+      animation: fillHeart 0.4s ease-in-out forwards;
+    }
+  }
+
+  @include mq($laptop) {
+    &:hover {
+      .heart__filled {
+        animation: fillHeart 0.4s ease-in-out forwards;
+      }
+    }
+  }
+
+  &__empty,
+  &__filled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  &__empty {
+    color: $color__heart-empty;
+  }
+  &__filled {
+    background: -webkit-linear-gradient(
+      $color__heart-gradient--1,
+      $color__heart-gradient--2
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(0);
+    opacity: 0;
+  }
+}

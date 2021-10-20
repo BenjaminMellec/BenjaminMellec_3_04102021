@@ -4,6 +4,7 @@ $color__loader-item: $grey-dark;
 $loaderDelays: (0s, 0.4s, 0.8s, 1.2s);
 
 .loader {
+  display: none;
   position: fixed;
   top: 0;
   background-color: $color__loader;
