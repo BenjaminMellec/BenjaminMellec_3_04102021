@@ -137,12 +137,39 @@ $color__restaurants: $grey-light;
       margin: 0 -10px;
     }
     &-item {
+      position: relative;
+      transition: 0.2s;
+      border-radius: 15px;
+      margin: 0 0 20px 0;
+
+      &:focus,
+      &:active {
+        @include box-shadow(0.45);
+        transform: translateY(-2px);
+      }
+
       @include mq($tablet) {
-        padding: 0 10px;
-        width: 50%;
+        margin: 0 10px 20px 10px;
+        width: calc(50% - 20px);
+      }
+      @include mq($laptop) {
+        &:focus,
+        &:active {
+          @include box-shadow;
+        }
+        &:hover {
+          @include box-shadow(0.45);
+          transform: translateY(-2px);
+        }
       }
       @include mq($desktop) {
-        width: 25%;
+        width: calc(25% - 20px);
+      }
+
+      .heart {
+        position: absolute;
+        top: 190px;
+        right: 25px;
       }
     }
   }

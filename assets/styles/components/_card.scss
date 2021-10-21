@@ -8,7 +8,7 @@ $cardsDelays: (0s, 0.2s, 0.4s, 0.6s);
   display: block;
   background-color: $color__card;
   border-radius: 15px;
-  margin-bottom: 20px;
+
   @include box-shadow;
   cursor: pointer;
   &__image {
@@ -23,9 +23,7 @@ $cardsDelays: (0s, 0.2s, 0.4s, 0.6s);
     }
   }
   &__content {
-    display: flex;
     padding: 15px 25px 15px 15px;
-    justify-content: space-between;
     h3 {
       font-size: 18px;
       margin-bottom: 5px;
@@ -38,27 +36,11 @@ $cardsDelays: (0s, 0.2s, 0.4s, 0.6s);
   &__content,
   &__price,
   &__check {
-    display: flex;
     transition: 0.4s ease-in-out;
   }
-  &:not(.card--menu) {
-    transition: 0.2s;
-    &:focus,
-    &:active {
-      @include box-shadow(0.45);
-      transform: translateY(-2px);
-    }
-
-    @include mq($laptop) {
-      &:focus,
-      &:active {
-        @include box-shadow;
-      }
-      &:hover {
-        @include box-shadow(0.45);
-        transform: translateY(-2px);
-      }
-    }
+  &__price,
+  &__check {
+    display: flex;
   }
 }
 .card--menu {
