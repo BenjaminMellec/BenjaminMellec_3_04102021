@@ -9,6 +9,8 @@ $color__functioning-item-link--active: #f5edff;
 $color__functioning-item-icon: $grey-dark;
 $color__functioning-item-icon--active: $primary;
 $color__restaurants: $grey-light;
+$color__restaurants-item--new: $tertiary--dark;
+$color__restaurants-item--new-bg: $tertiary;
 
 .location {
   padding: 16px 0;
@@ -164,6 +166,22 @@ $color__restaurants: $grey-light;
       }
       @include mq($desktop) {
         width: calc(25% - 20px);
+      }
+
+      &--new {
+        &::after {
+          content: "Nouveau";
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          padding: 0 10px;
+          background-color: $color__restaurants-item--new-bg;
+          font-size: 14px;
+          line-height: 30px;
+          font-weight: 500;
+          color: $color__restaurants-item--new;
+          border-radius: 2px;
+        }
       }
 
       .heart {
